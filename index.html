@@ -18,6 +18,7 @@
           placeholder="e.g Jane Applessed"
           required
         />
+        <p class="error1">invalid input</p>
         <h2>CARD NUMBER</h2>
         <input
           type="text"
@@ -25,17 +26,25 @@
           placeholder="e.g 1234 5678 9123 0000"
           required
         />
+        <p class="error2">wrong card number</p>
         <div class="card-title">
           <div>
             <h2>EXP. DATE (MM/YY)</h2>
             <div class="date">
-              <input type="text" id="month" placeholder="MM" required />
-              <input type="text" id="year" placeholder="YY" required />
+              <div>
+                <input type="text" id="month" placeholder="MM" required />
+                <p class="error3">invalid input</p>
+              </div>
+              <div>
+                <input type="text" id="year" placeholder="YY" required />
+                <p class="error4">invalid in</p>
+              </div>
             </div>
           </div>
           <div>
             <h2>CVC</h2>
             <input type="text" id="cvc" placeholder="e.g. 123" required />
+            <p class="error5">invalid input</p>
           </div>
         </div>
         <button id="button">Confirm</button>
@@ -43,6 +52,6 @@
     </div>
     <img src="images/front-side.png" alt="card-img" class="front-card" />
     <img src="images/back-side.png" alt="card-img" class="back-card" />
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
