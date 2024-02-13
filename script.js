@@ -1,4 +1,5 @@
 const error1 = document.querySelector(".error1");
+const error2 = document.querySelector(".error2");
 const error3 = document.querySelector(".error3");
 const error4 = document.querySelector(".error4");
 const error5 = document.querySelector(".error5");
@@ -13,6 +14,16 @@ function nameCheck() {
     error1.style.display = "block";
   }
 }
+function cardNumberCheck() {
+  let cardNumberInput = document.querySelector("#number").value;
+  let splited = cardNumberInput.split("");
+  if (splited.length === 16) {
+    error2.style.display = "none";
+  } else {
+    error2.style.display = "block";
+  }
+}
+
 function monthCheck() {
   let monthInput = Number(document.querySelector("#month").value);
   if (monthInput >= 1 && monthInput <= 12) {
@@ -32,7 +43,6 @@ function yearCheck() {
 
 function cvcCheck() {
   let cvcInput = Number(document.querySelector("#cvc").value);
-  console.log(typeof cvcInput);
   if (cvcInput >= 100 && cvcInput <= 999) {
     error5.style.display = "none";
   } else {
@@ -42,6 +52,7 @@ function cvcCheck() {
 
 button.addEventListener("click", () => {
   nameCheck();
+  cardNumberCheck();
   monthCheck();
   yearCheck();
   cvcCheck();

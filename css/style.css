@@ -6,7 +6,6 @@ body {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
   display: flex;
-  justify-content: center;
   align-items: center;
   position: relative;
 }
@@ -36,7 +35,6 @@ h2 {
 .error4,
 .error5 {
   display: none;
-  font-size: 14px;
   color: red;
 }
 #name,
@@ -92,16 +90,60 @@ h2 {
   background-color: #6c2396;
 }
 .front-card {
-  display: none;
   position: absolute;
+  width: 447px;
+  height: 245px;
   top: 100px;
-  left: 164px;
+  left: 120px;
+  background-color: #630d9e;
+  padding: 20px;
   border-radius: 10px;
 }
+.oval {
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  background-color: white;
+}
+h3 {
+  width: 407px;
+  font-size: 28px;
+  color: white;
+  margin-top: 70px;
+  text-align: center;
+}
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  color: white;
+  font-size: 18px;
+}
 .back-card {
-  display: none;
+  width: 447px;
+  height: 245px;
+  background-color: #dcdce1;
   position: absolute;
   top: 400px;
-  left: 258px;
+  left: 170px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.black-line {
+  margin-top: 40px;
+  width: 100%;
+  height: 54px;
+  background-color: black;
+}
+.card-cvc {
+  margin-top: 30px;
+  width: 361px;
+  height: 38px;
+  background-color: #adb5be;
+  padding: 10px;
+  text-align: right;
+  font-size: 18px;
 }
