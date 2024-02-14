@@ -3,16 +3,17 @@
 body {
   max-width: 100%;
   min-height: 100vh;
+  margin: 0 auto;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
   display: flex;
   align-items: center;
-  position: relative;
 }
 .first-part {
   width: 483px;
   min-height: 100vh;
   background: #43195b;
+  position: relative;
 }
 .second-part {
   width: 900px;
@@ -87,6 +88,31 @@ h2 {
   cursor: pointer;
 }
 #button:hover {
+  background-color: #6c2396;
+}
+.add-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.add-image {
+  width: 80px;
+  height: 80px;
+}
+h5,
+.add-paragraph {
+  font-size: 18px;
+}
+.add-button {
+  width: 381px;
+  height: 53px;
+  background: #21092f;
+  border-radius: 8px;
+  font-size: 18px;
+  color: white;
+}
+.add-button:hover {
   background-color: #6c2396;
 }
 .front-card {
