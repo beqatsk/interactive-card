@@ -5,6 +5,7 @@
   .first-part {
     width: 375px;
     min-height: 240px;
+    position: relative;
   }
   .second-part {
     width: 375px;

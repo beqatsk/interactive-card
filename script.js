@@ -58,7 +58,8 @@ function cvcCheck() {
   }
 }
 
-button.addEventListener("click", () => {
+button.addEventListener("click", (event) => {
+  event.preventDefault();
   submit = true;
   nameCheck();
   cardNumberCheck();
@@ -81,6 +82,14 @@ nameInput.addEventListener("input", (event) => {
 
 const cardNumber = document.querySelector("h3");
 cardNumberInput.addEventListener("input", (event) => {
+  if (
+    event.inputType !== "deleteContentBackward" &&
+    (event.target.value.length == 4 ||
+      event.target.value.length == 9 ||
+      event.target.value.length == 14)
+  ) {
+    event.target.value += " ";
+  }
   cardNumber.textContent = event.target.value;
   if (event.target.value.length === 0) {
     cardNumber.textContent = "0000 0000 0000 0000";
@@ -108,16 +117,3 @@ cvcInput.addEventListener("input", (event) => {
     cardCvc.textContent = "000";
   }
 });
-
-function formatCardNumber(cardNumber) {
-  cardNumber = cardNumber.replace(/\D/g, "");
-  var formattedNumber = "";
-  for (var i = 0; i < cardNumber.length; i++) {
-    if (i > 0 && i % 4 === 0) {
-      formattedNumber += " ";
-    }
-    formattedNumber += cardNumber[i];
-  }
-
-  return formattedNumber;
-}
