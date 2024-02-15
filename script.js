@@ -7,8 +7,11 @@ const button = document.querySelector("#button");
 const nameInput = document.querySelector("#name");
 const cardNumberInput = document.querySelector("#number");
 const monthInput = document.querySelector("#month");
-let yearInput = document.querySelector("#year");
-let cvcInput = document.querySelector("#cvc");
+const yearInput = document.querySelector("#year");
+const cvcInput = document.querySelector("#cvc");
+const formInput = document.querySelector(".form-part");
+const successInput = document.querySelector(".success-part");
+let submit = true;
 
 function nameCheck() {
   let splited = nameInput.value.split(" ");
@@ -16,6 +19,7 @@ function nameCheck() {
     error1.style.display = "none";
   } else {
     error1.style.display = "block";
+    submit = false;
   }
 }
 function cardNumberCheck() {
@@ -24,6 +28,7 @@ function cardNumberCheck() {
     error2.style.display = "none";
   } else {
     error2.style.display = "block";
+    submit = false;
   }
 }
 
@@ -32,6 +37,7 @@ function monthCheck() {
     error3.style.display = "none";
   } else {
     error3.style.display = "block";
+    submit = false;
   }
 }
 function yearCheck() {
@@ -39,6 +45,7 @@ function yearCheck() {
     error4.style.display = "none";
   } else {
     error4.style.display = "block";
+    submit = false;
   }
 }
 
@@ -47,38 +54,59 @@ function cvcCheck() {
     error5.style.display = "none";
   } else {
     error5.style.display = "block";
+    submit = false;
   }
 }
 
 button.addEventListener("click", () => {
+  submit = true;
   nameCheck();
   cardNumberCheck();
   monthCheck();
   yearCheck();
   cvcCheck();
+  if (submit == true) {
+    formInput.style.display = "none";
+    successInput.style.display = "block";
+  }
 });
 
 const userName = document.querySelector(".user-name");
 nameInput.addEventListener("input", (event) => {
   userName.textContent = event.target.value;
+  if (event.target.value.length === 0) {
+    userName.textContent = "Jane Applessed";
+  }
 });
 
 const cardNumber = document.querySelector("h3");
 cardNumberInput.addEventListener("input", (event) => {
   cardNumber.textContent = event.target.value;
+  if (event.target.value.length === 0) {
+    cardNumber.textContent = "0000 0000 0000 0000";
+  }
 });
 
-// const cardMonth = document.querySelector(".card-month");
-// monthInput.addEventListener("input", (event) => {
-//   cardMonth.textContent = formatCardNumber(event.target.value);
-// });
+const cardMonth = document.querySelector(".card-month");
+monthInput.addEventListener("input", (event) => {
+  cardMonth.textContent = event.target.value;
+  if (event.target.value.length === 0) {
+    cardMonth.textContent = "00";
+  }
+});
 const cardyear = document.querySelector(".card-year");
 yearInput.addEventListener("input", (event) => {
   cardyear.textContent = event.target.value;
+  if (event.target.value.length === 0) {
+    cardyear.textContent = "00";
+  }
 });
 const cardCvc = document.querySelector(".card-cvc");
 cvcInput.addEventListener("input", (event) => {
   cardCvc.textContent = event.target.value;
+  if (event.target.value.length === 0) {
+    cardCvc.textContent = "000";
+  }
 });
 
 function formatCardNumber(cardNumber) {

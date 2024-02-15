@@ -31,7 +31,6 @@
     height: 157px;
     top: 127px;
     left: 35%;
-    /* left: 400px;  */
     z-index: 1;
   }
   .oval {
@@ -49,7 +48,9 @@
     height: 157px;
     top: 30px;
     left: 40%;
-    /* left: 450px; */
+  }
+  .user-card {
+    margin-top: 20px;
   }
   .black-line {
     margin-top: 15px;

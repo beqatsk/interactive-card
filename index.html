@@ -11,52 +11,56 @@
   <body>
     <div class="first-part"></div>
     <div class="second-part">
-      <form>
-        <h2>CARDHOLDER NAME</h2>
-        <input
-          type="text"
-          id="name"
-          placeholder="e.g Jane Applessed"
-          required
-        />
-        <p class="error1">invalid input</p>
-        <h2>CARD NUMBER</h2>
-        <input
-          type="number"
-          id="number"
-          placeholder="e.g 1234 5678 9123 0000"
-          required
-        />
-        <p class="error2">wrong card number</p>
-        <div class="card-title">
-          <div>
-            <h2>EXP. DATE (MM/YY)</h2>
-            <div class="date">
-              <div>
-                <input type="text" id="month" placeholder="MM" required />
-                <p class="error3">invalid input</p>
-              </div>
-              <div>
-                <input type="text" id="year" placeholder="YY" required />
-                <p class="error4">invalid input</p>
+      <div class="form-part">
+        <form>
+          <h2>CARDHOLDER NAME</h2>
+          <input
+            type="text"
+            id="name"
+            placeholder="e.g Jane Applessed"
+            required
+          />
+          <p class="error1">invalid input</p>
+          <h2>CARD NUMBER</h2>
+          <input
+            type="number"
+            id="number"
+            placeholder="e.g 1234 5678 9123 0000"
+            required
+          />
+          <p class="error2">wrong card number</p>
+          <div class="card-title">
+            <div>
+              <h2>EXP. DATE (MM/YY)</h2>
+              <div class="date">
+                <div>
+                  <input type="text" id="month" placeholder="MM" required />
+                  <p class="error3">invalid input</p>
+                </div>
+                <div>
+                  <input type="text" id="year" placeholder="YY" required />
+                  <p class="error4">invalid input</p>
+                </div>
               </div>
             </div>
+            <div>
+              <h2>CVC</h2>
+              <input type="text" id="cvc" placeholder="e.g. 123" required />
+              <p class="error5">invalid input</p>
+            </div>
           </div>
-          <div>
-            <h2>CVC</h2>
-            <input type="text" id="cvc" placeholder="e.g. 123" required />
-            <p class="error5">invalid input</p>
-          </div>
+          <button id="button">Confirm</button>
+        </form>
+      </div>
+      <div class="success-part">
+        <div class="add-title">
+          <img src="./Group 9.png" alt="icone" class="add-image" />
+          <h5>THANK YOU!</h5>
+          <p class="add-paragraph">We've added your card details</p>
+          <button class="add-button">Continue</button>
         </div>
-        <button id="button">Confirm</button>
-      </form>
+      </div>
     </div>
-    <!-- <div class="add-title">
-      <img src="./Group 9.png" alt="icone" class="add-image" />
-      <h5>THANK YOU!</h5>
-      <p class="add-paragraph">We've added your card details</p>
-      <button class="add-button">Continue</button>
-    </div> -->
     <div class="front-card">
       <div class="oval"></div>
       <h3>0000 0000 0000 0000</h3>
