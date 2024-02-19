@@ -24,7 +24,7 @@ function nameCheck() {
 }
 function cardNumberCheck() {
   let splited = cardNumberInput.value.split("");
-  if (splited.length === 16) {
+  if (splited.length === 19) {
     error2.style.display = "none";
   } else {
     error2.style.display = "block";
